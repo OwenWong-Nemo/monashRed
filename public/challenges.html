@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
-    <title>Challenges</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges - SUDI Prevention</title>
+    <link rel="stylesheet" href="style/main.css">
 </head>
-
 <body>
-    <h1>Challenges of the research</h1>
+    <div class="container">
+        <div id="sidebar-include"></div>
+        <div class="main-content">
+            <div class="header">
+                <h1>Challenges</h1>
+                <p>Discuss the challenges faced in SUDI prevention and your strategies to overcome them here.</p>
+            </div>
+            <div style="min-height: 300px; font-size: 1.3rem; color: #555;">
+                <!-- Room for you to type your content -->
+            </div>
+        </div>
+    </div>
+    <script>
+        fetch('sidebar.html')
+          .then(res => res.text())
+          .then(html => document.getElementById('sidebar-include').outerHTML = html);
+    </script>
 </body>
-
 </html>

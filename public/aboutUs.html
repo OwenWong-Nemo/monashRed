@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
-    <title>About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SUDI Prevention</title>
+    <link rel="stylesheet" href="style/main.css">
 </head>
-
 <body>
-    <h1>About us</h1>
+    <div class="container">
+        <div id="sidebar-include"></div>
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h1>About Us</h1>
+                <p>Write about your team, your mission, and your passion for SUDI prevention here.</p>
+            </div>
+            <div style="min-height: 300px; font-size: 1.3rem; color: #555;">
+                <!-- Room for you to type your content -->
+            </div>
+        </div>
+    </div>
+    <script>
+        fetch('sidebar.html')
+          .then(res => res.text())
+          .then(html => document.getElementById('sidebar-include').outerHTML = html);
+    </script>
 </body>
-
 </html>

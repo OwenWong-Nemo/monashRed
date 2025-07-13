@@ -6,9 +6,6 @@ const PORT = 3000;
 
 // Route short cut
 const root = path.join(__dirname, 'public');
-const branch1 = path.join(__dirname, 'branch1');
-const branch2 = path.join(__dirname, 'branch2');
-const branch3 = path.join(__dirname, 'branch3');
 
 app.use(express.static(root));
 

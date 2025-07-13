@@ -5,24 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUDI Prevention - Home</title>
-    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="style/main.css">
 </head>
 
 <body>
     <div class="container">
         <!-- Sidebar -->
-        <div class="sidebar">
-            <h2>Navigation</h2>
-            <ul class="sidebar-nav">
-                <li><a href="/aboutUs">About Us</a></li>
-                <li><a href="/researchTopic">Our Research Topic</a></li>
-                <li><a href="/ourMission">Our Goal/Mission</a></li>
-                <li><a href="/challenges">Challenges</a></li>
-                <li><a href="/contactUs">Contact Us</a></li>
-                <li><a href="/qAndA">Q&A</a></li>
-                <li><a href="/prototype3d">3D Prototype</a></li>
-            </ul>
-        </div>
+        <div id="sidebar-include"></div>
 
         <!-- Main Content -->
         <div class="main-content">
@@ -49,6 +38,11 @@
             </div>
         </div>
     </div>
+    <script>
+        fetch('sidebar.html')
+          .then(res => res.text())
+          .then(html => document.getElementById('sidebar-include').outerHTML = html);
+    </script>
 </body>
 
 </html>

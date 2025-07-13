@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
-    <title>Research Topic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Research Topic - SUDI Prevention</title>
+    <link rel="stylesheet" href="style/main.css">
 </head>
-
 <body>
-    <h1>Research Topic</h1>
+    <div class="container">
+        <div id="sidebar-include"></div>
+        <div class="main-content">
+            <div class="header">
+                <h1>Our Research Topic</h1>
+                <p>Describe your research topic, its importance, and your approach here.</p>
+            </div>
+            <div style="min-height: 300px; font-size: 1.3rem; color: #555;">
+                <!-- Room for you to type your content -->
+            </div>
+        </div>
+    </div>
+    <script>
+        fetch('sidebar.html')
+          .then(res => res.text())
+          .then(html => document.getElementById('sidebar-include').outerHTML = html);
+    </script>
 </body>
-
 </html>
