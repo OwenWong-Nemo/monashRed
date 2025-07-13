@@ -26,7 +26,7 @@ app.listen(PORT, () => {
 
 // Landing Page
 app.get('/', (req, res) => {
-  res.sendFile(path.join(root, 'index.html'));
+  res.sendFile('index.html');
 });
 
 // About Us
