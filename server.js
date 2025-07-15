@@ -71,7 +71,15 @@ app.get('/ourSoluLandingPage', (req, res) => {
   res.sendFile(path.join(root, 'branch3', 'ourSoluLandingPage.html'));
 });
 
-// Testing
-app.get('/prototype3d', (req, res) => {
-  res.sendFile(path.join(root, 'prototype3d.html'))
+// Prototype
+app.get('/prototypeMain', (req, res) => {
+  res.sendFile(path.join(root, 'prototypeMain.html'))
 })
+
+app.get('/prototype2', (req, res) => {
+  res.sendFile(path.join(root, 'prototype2.html'))
+})
+
+
+
+

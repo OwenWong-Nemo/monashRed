@@ -9,16 +9,26 @@
 <body>
     <div class="container">
         <div id="sidebar-include"></div>
+        
         <div class="main-content">
             <div class="header">
                 <h1>Our Research Topic</h1>
-                <p>Describe your research topic, its importance, and your approach here.</p>
             </div>
-            <div style="min-height: 300px; font-size: 1.3rem; color: #555;">
-                <!-- Room for you to type your content -->
+
+            <div class="research-topic" style="padding: 1.5rem; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.05);">
+                <h2 style="font-size: 1.8rem; color: #333;">A Sleeping Device for SUDI Prevention</h2>
+                <p style="font-size: 1.1rem; color: #666; margin-top: 0.8rem; line-height: 1.6;">
+                    We are designing an innovative sleeping device to help reduce the risk of SUDI (Sudden Unexpected Death in Infancy) by promoting safe sleep practices.
+                </p>
+                
+                <h3 style="font-size: 1.4rem; color: #444; margin-top: 2rem;">Research Question</h3>
+                <blockquote style="font-size: 1.2rem; font-style: italic; color: #333; border-left: 4px solid #ccc; padding-left: 1rem; margin-top: 1rem;">
+                    How can we improve the likelihood of various communities adopting this device, and what must be done to tailor it to their diverse needs and cultural practices?
+                </blockquote>
             </div>
         </div>
     </div>
+
     <script>
         fetch('sidebar.html')
           .then(res => res.text())

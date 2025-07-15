@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototype 2</title>
+  <link rel="stylesheet" href="style/main.css">
+  <style>
+    .floating-btn {
+      position: fixed;
+      top: 1.2rem;
+      z-index: 1000;
+      text-decoration: none;
+    }
+    .floating-btn.left { left: 1.2rem; }
+    .floating-btn.right { right: 1.2rem; }
+    .floating-btn button {
+      display: flex; align-items: center; gap: 0.5em;
+      background: linear-gradient(135deg, #8b4513, #a0522d);
+      color: white; border: none; border-radius: 10px;
+      padding: 0.5em 1em; font-size: 1em; font-family: 'Quicksand', sans-serif;
+      box-shadow: 0 2px 8px rgba(139,69,19,0.10); cursor: pointer;
+      transition: background 0.2s; min-width: 0; min-height: 0;
+    }
+    .floating-btn img {
+      width: 2em; height: 2em; border-radius: 6px; background: #fffbe9;
+      box-shadow: 0 1px 4px rgba(139,69,19,0.08); margin: 0;
+    }
+    .floating-btn.right button {
+      display: flex; align-items: center; justify-content: center; width: 7em; height: 7em; background: linear-gradient(135deg, #8b4513, #a0522d); border: none; border-radius: 20px; box-shadow: 0 2px 8px rgba(139,69,19,0.10); cursor: pointer; transition: background 0.2s; padding: 0; min-width: 0; min-height: 0;
+    }
+    .floating-btn.right img {
+      width: 6.5em; height: 6.5em; border-radius: 16px; background: #fffbe9; object-fit: contain;
+    }
+    .floating-btn.right span {
+      font-size: 1.1em; color: #8b4513; font-family: 'Quicksand', sans-serif; margin-top: 0.7em; font-weight: 600; text-align: center;
+    }
+    @media (max-width: 600px) {
+      .floating-btn { top: 0.5rem; }
+      .floating-btn.left { left: 0.5rem; }
+      .floating-btn.right { right: 0.5rem; }
+      .floating-btn button {
+        padding: 0.3em 0.6em; font-size: 0.85em;
+      }
+      .floating-btn img {
+        width: 1.3em; height: 1.3em;
+      }
+      .floating-btn.right button {
+        width: 4.2em !important;
+        height: 4.2em !important;
+        padding: 0 !important;
+      }
+      .floating-btn.right img {
+        width: 3.7em !important;
+        height: 3.7em !important;
+        border-radius: 10px !important;
+      }
+      .floating-btn.right span {
+        font-size: 0.9em !important;
+        margin-top: 0.4em !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="/" class="floating-btn left">
+    <button>HomePage</button>
+  </a>
+  <a href="/prototypeMain" class="floating-btn right" style="right: 1.2rem; top: 1.2rem; text-decoration: none; display: flex; flex-direction: column; align-items: center;">
+    <button style="display: flex; align-items: center; justify-content: center; width: 7em; height: 7em; background: linear-gradient(135deg, #8b4513, #a0522d); border: none; border-radius: 20px; box-shadow: 0 2px 8px rgba(139,69,19,0.10); cursor: pointer; transition: background 0.2s; padding: 0; min-width: 0; min-height: 0;">
+      <img src="img/prototype1Icon.png" alt="3D prototype2 Icon" style="width: 6.5em; height: 6.5em; border-radius: 16px; background: #fffbe9; object-fit: contain;" />
+    </button>
+    <span style="font-size: 1.1em; color: #8b4513; font-family: 'Quicksand', sans-serif; margin-top: 0.7em; font-weight: 600; text-align: center;">Prototype 1</span>
+  </a>
+  <!-- Main 3D content will be rendered here by JS -->
+  <script type="module" src="/prototype2.js"></script>
+</body>
+</html>
