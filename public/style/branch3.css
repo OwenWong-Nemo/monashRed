@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+body {
+  background: linear-gradient(135deg, #0a0a0a 80%, #0f3d0f 100%);
+  color: #aaffaa;
+  font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.branch3-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding-top: 3rem;
+}
+
+.branch3-header-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 4.5rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.branch3-header {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 0;
+  width: max-content;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: #aaffaa;
+  text-shadow: 0 0 18px #00ff88, 0 0 4px #0f3d0f;
+  line-height: 1.1;
+}
+
+.branch3-home-btn {
+  position: absolute;
+  top: 1.25rem;
+  left: 1rem;
+  z-index: 10;
+}
+
+.hexagon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 290px; /* Updated height */
+  margin: 1.5rem;
+  text-decoration: none;
+  color: #aaffaa;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+}
+
+.hexagon-link .hexagon-shape {
+  width: 320px;
+  height: 290px;
+  background: #111e11;
+  clip-path: polygon(
+    25% 6.7%, 75% 6.7%,
+    100% 50%, 75% 93.3%,
+    25% 93.3%, 0% 50%
+  );
+  box-shadow: 0 0 24px #00ff88, 0 0 4px #0f3d0f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.hexagon-link:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.hexagon-link:hover .hexagon-shape {
+  background: #0f3d0f;
+  box-shadow:
+    0 0 24px #00ff88,
+    0 0 12px #00ff88,
+    0 0 24px #00ff88 inset;
+}
+
+.hexagon-content {
+  position: relative;
+  z-index: 2;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.hexagon-link:hover .hexagon-content {
+  transform: scale(1.02);
+  opacity: 1;
+  filter: brightness(1.2);
+}
+
+.hexagon-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #aaffaa;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #00ff88;
+}
+
+.hexagon-desc {
+  font-size: 1rem;
+  color: #b6ffb6;
+  opacity: 0.85;
+  text-shadow: 0 0 4px #00ff88;
+}
+
+.branch3-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  .branch3-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .hexagon-link,
+  .hexagon-link .hexagon-shape {
+    width: 200px;
+    height: 190px;
+  }
+}

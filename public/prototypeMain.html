@@ -5,10 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prototype 3D</title>
-  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/branch3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body style="background: #23272b;">
   <style>
     .floating-btn {
       position: fixed;
@@ -20,15 +21,15 @@
     .floating-btn.right { right: 1.2rem; }
     .floating-btn button {
       display: flex; align-items: center; gap: 0.5em;
-      background: linear-gradient(135deg, #8b4513, #a0522d);
-      color: white; border: none; border-radius: 10px;
-      padding: 0.5em 1em; font-size: 1em; font-family: 'Quicksand', sans-serif;
-      box-shadow: 0 2px 8px rgba(139,69,19,0.10); cursor: pointer;
+      background: linear-gradient(135deg, #0f3d0f, #00ff88);
+      color: #aaffaa; border: none; border-radius: 10px;
+      padding: 0.5em 1em; font-size: 1em; font-family: 'Orbitron', sans-serif;
+      box-shadow: 0 2px 8px #00ff88; cursor: pointer;
       transition: background 0.2s; min-width: 0; min-height: 0;
     }
     .floating-btn img {
-      width: 2em; height: 2em; border-radius: 6px; background: #fffbe9;
-      box-shadow: 0 1px 4px rgba(139,69,19,0.08); margin: 0;
+      width: 2em; height: 2em; border-radius: 6px; background: #0a0a0a;
+      box-shadow: 0 1px 4px #00ff88; margin: 0;
     }
     @media (max-width: 600px) {
       .floating-btn { top: 0.5rem; }
@@ -43,14 +44,14 @@
     }
     @media (max-width: 600px) {
       .floating-btn.right button {
-        width: 4.2em !important;
-        height: 4.2em !important;
+        width: 6em !important;
+        height: 6em !important;
         padding: 0 !important;
       }
       .floating-btn.right img {
-        width: 3.7em !important;
-        height: 3.7em !important;
-        border-radius: 10px !important;
+        width: 5.5em !important;
+        height: 5.5em !important;
+        border-radius: 14px !important;
       }
       .floating-btn.right span {
         font-size: 0.9em !important;
@@ -58,14 +59,14 @@
       }
     }
   </style>
-  <a href="/" class="floating-btn left">
-    <button>HomePage</button>
+  <a href="/ourSoluLandingPage" class="floating-btn left">
+    <button>Solution Page</button>
   </a>
   <a href="/prototype2" class="floating-btn right" style="right: 1.2rem; top: 1.2rem; text-decoration: none; display: flex; flex-direction: column; align-items: center;">
-    <button style="display: flex; align-items: center; justify-content: center; width: 7em; height: 7em; background: linear-gradient(135deg, #8b4513, #a0522d); border: none; border-radius: 20px; box-shadow: 0 2px 8px rgba(139,69,19,0.10); cursor: pointer; transition: background 0.2s; padding: 0; min-width: 0; min-height: 0;">
-      <img src="img/prototype2Icon.png" alt="3D prototype2 Icon" style="width: 6.5em; height: 6.5em; border-radius: 16px; background: #fffbe9; object-fit: contain;" />
+    <button style="display: flex; align-items: center; justify-content: center; width: 10em; height: 10em; background: linear-gradient(135deg, #0f3d0f, #00ff88); border: none; border-radius: 28px; box-shadow: 0 2px 8px #00ff88; cursor: pointer; transition: background 0.2s; padding: 0; min-width: 0; min-height: 0;">
+      <img src="img/prototype2Icon.png" alt="3D prototype2 Icon" style="width: 9em; height: 9em; border-radius: 22px; background: #0a0a0a; object-fit: contain; box-shadow: 0 1px 4px #00ff88;" />
     </button>
-    <span style="font-size: 1.1em; color: #8b4513; font-family: 'Quicksand', sans-serif; margin-top: 0.7em; font-weight: 600; text-align: center;">Prototype 2</span>
+    <span style="font-size: 1.1em; color: #aaffaa; font-family: 'Orbitron', 'Segoe UI', 'Arial Black', 'sans-serif'; margin-top: 0.7em; font-weight: 700; text-align: center; letter-spacing: 1.5px; text-shadow: 0 0 8px #00ff88, 0 0 2px #0f3d0f;">Prototype 2</span>
   </a>
   <script type="module" src="/prototypeMain.js"></script>
 </body>
