@@ -122,7 +122,11 @@
               </ul>
             `
           };
-          document.getElementById('branch-content').innerHTML = contentMap[type];
+          const target = document.getElementById('branch-content');
+          target.innerHTML = contentMap[type];
+
+          // Scroll to the content with smooth animation
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       </script>
     </main>
