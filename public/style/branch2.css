@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Quicksand:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f6fa 60%, #d1d5db 100%);
+    color: #23272b;
+    line-height: 1.6;
+    font-size: 1.18rem;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 260px;
+    background: linear-gradient(135deg, #444950, #a0aec0);
+    color: #f5f6fa;
+    padding: 2.5rem 0;
+    box-shadow: 2px 0 12px rgba(34, 48, 74, 0.08);
+    font-size: 1.13rem;
+    min-width: 180px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    padding: 0 1rem;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    color: #f5f6fa;
+    letter-spacing: 1.2px;
+}
+
+.sidebar-nav {
+    list-style: none;
+}
+
+.sidebar-nav li {
+    margin-bottom: 0.8rem;
+}
+
+.sidebar-nav a {
+    display: block;
+    padding: 1rem 2.2rem;
+    color: #e2e8f0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+    font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.13rem;
+    border-radius: 10px;
+}
+
+.sidebar-nav a:hover {
+    background-color: #23272b;
+    border-left-color: #a0aec0;
+    transform: translateX(5px);
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.header {
+    margin-bottom: 3.5rem;
+}
+
+.header h1 {
+    font-size: 2.7rem;
+    color: #23272b;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 2px 8px #e2e8f0;
+    text-align: center;
+}
+
+.header p {
+    font-size: 1.25rem;
+    color: #444950;
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+
+/* Branch Buttons */
+.branch-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.branch-button {
+    background: linear-gradient(135deg, #e2e8f0, #a0aec0);
+    color: #23272b;
+    padding: 2.2rem 1.2rem;
+    border-radius: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(34, 48, 74, 0.10);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.13rem;
+}
+
+.branch-button:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(34, 48, 74, 0.18);
+    background: linear-gradient(135deg, #a0aec0, #e2e8f0);
+}
+
+.branch-button h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.1rem;
+    font-weight: 700;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    color: #23272b;
+    letter-spacing: 1px;
+}
+
+.branch-button p {
+    font-size: 1.05rem;
+    opacity: 0.97;
+    line-height: 1.6;
+    font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #444950;
+}
+
+.collapsible-section {
+    background: linear-gradient(135deg, #e2e8f0, #a0aec0);
+    border-radius: 12px;
+    margin-bottom: 1.8rem;
+    box-shadow: 0 6px 18px rgba(34, 48, 74, 0.08);
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.collapsible-header {
+    cursor: pointer;
+    padding: 1.5rem 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #23272b;
+    transition: background 0.3s;
+}
+
+.collapsible-header:hover {
+    background: #d1d5db;
+}
+
+.arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.collapsible-section.active .arrow {
+    transform: rotate(180deg);
+}
+
+.collapsible-body {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f5f6fa;
+    color: #444950;
+    font-size: 1.1rem;
+    padding: 0 1.8rem;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    text-align: justify;
+}
+
+.collapsible-section.active .collapsible-body {
+    max-height: 600px;
+    padding: 1rem 1.8rem 1.5rem;
+}
+
+.collapsible-body ul {
+    padding-left: 2rem;
+    margin-top: 1rem;
+}
+
+.collapsible-body li {
+    margin-bottom: 0.6rem;
+    line-height: 1.6;
+}
+
+.home-button {
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    background: linear-gradient(135deg, #a0aec0, #e2e8f0);
+    color: #23272b;
+    padding: 0.7rem 1.4rem;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(34, 48, 74, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background: linear-gradient(135deg, #e2e8f0, #a0aec0);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(34, 48, 74, 0.18);
+}
+
+.intro-list {
+    list-style: none;
+    padding-left: 2rem;
+    margin-top: 1rem;
+    text-align: justify;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.intro-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    text-indent: -1.2rem;
+    /* keep bullet aligned */
+    margin-bottom: 0.5rem;
+}
+
+.intro-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #23272b;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+    .branch-buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        padding: 1.5rem;
+        font-size: 1rem;
+        position: relative;
+        box-shadow: none;
+        border-radius: 0 0 24px 24px;
+    }
+
+    .main-content {
+        padding: 2rem 1rem;
+    }
+
+    .header h1 {
+        font-size: 1.7rem;
+    }
+
+    .branch-buttons {
+        grid-template-columns: 1fr;
+    }
+}

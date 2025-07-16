@@ -8,27 +8,59 @@
 </head>
 <body>
     <div class="container">
-        <div id="sidebar-include"></div>
-        <div class="main-content">
-            <div class="header">
-                <h1>Our Mission</h1>
-            </div>
-            <div style="min-height: 300px; font-size: 1.3rem; color: #555;">
-                <p>We have 3 points of focus: </p>
-                <li>Decrease infant mortality related to SUDI</li>
-                <li>Commercialisation & Marketing</li>
-                <li>Collaboration with various communities</li>
-                <br>
-                <p>Our objective is to:</p>
-                <li>User-friendly & culturally appropriate design</li>
-                <li>Unique product design</li>
-            </div>
+      <div id="sidebar-include"></div>
+  
+      <div class="main-content">
+        <div class="header">
+          <h1>Our Mission</h1>
         </div>
+  
+        <!-- Intro Card -->
+        <div class="card">
+          <h2>Why We Exist</h2>
+          <p>We are driven by the belief that no family should experience the tragedy of losing a child to preventable causes. Our mission is to reduce Sudden Unexpected Death in Infancy (SUDI) through innovation, empathy, and culturally inclusive design.</p>
+        </div>
+  
+        <!-- Mission Statement Card -->
+        <div class="card">
+          <h2>Mission Statement</h2>
+          <p><strong>To design and deliver a safe, user-friendly, and culturally respectful infant sleeping device that supports healthy sleep practices across diverse communities.</strong></p>
+        </div>
+  
+        <!-- Focus Areas Card -->
+        <div class="card">
+          <h2>Our Focus Areas</h2>
+          <ul>
+            <li><strong>Reduce SUDI-related infant mortality</strong> through evidence-based design and education.</li>
+            <li><strong>Commercialization & Marketing</strong> to ensure accessibility, affordability, and desirability.</li>
+            <li><strong>Community Collaboration</strong> to co-design with cultural leaders, caregivers, and healthcare providers.</li>
+          </ul>
+        </div>
+  
+        <!-- Objectives Card -->
+        <div class="card">
+          <h2>Our Key Objectives</h2>
+          <ul>
+            <li>Create a product that is user-friendly, intuitive, and adaptable for daily life.</li>
+            <li>Design with cultural sensitivity in mind to honor varying infant sleep practices.</li>
+            <li>Develop a unique product that stands out visually and functionally.</li>
+            <li>Engage with communities to build trust and receive feedback.</li>
+            <li>Ensure the design is scalable and affordable across different income groups.</li>
+          </ul>
+        </div>
+  
+        <!-- Optional Vision Section -->
+        <div class="card">
+          <h2>Looking Forward</h2>
+          <p>In the future, we hope to partner with hospitals, NGOs, and community groups to expand our reach and continue developing tools that empower families worldwide. Innovation doesn't stop at design — it grows with feedback, data, and collective care.</p>
+        </div>
+      </div>
     </div>
+  
     <script>
-        fetch('sidebar.html')
-          .then(res => res.text())
-          .then(html => document.getElementById('sidebar-include').outerHTML = html);
+      fetch('sidebar.html')
+        .then(res => res.text())
+        .then(html => document.getElementById('sidebar-include').outerHTML = html);
     </script>
-</body>
+  </body>
 </html>

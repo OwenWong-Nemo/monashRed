@@ -8,8 +8,8 @@
 
 body {
     font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fffbe9;
-    color: #333;
+    background: linear-gradient(135deg, #e3f6f5 60%, #b8e0e7 100%);
+    color: #355c5b;
     line-height: 1.6;
     font-size: 1.25rem;
 }
@@ -17,18 +17,19 @@ body {
 .container {
     display: flex;
     min-height: 100vh;
-    /* text-align: justify; */
 }
 
 /* Sidebar Styles */
 .sidebar {
-    width: 280px;
-    background: linear-gradient(135deg, #8b4513, #a0522d);
-    color: white;
+    width: 260px;
+    background: linear-gradient(135deg, #a7c7c5, #e3f6f5);
+    color: #355c5b;
     padding: 2.5rem 0;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 12px rgba(52, 100, 100, 0.08);
     font-size: 1.15rem;
-    min-width: 220px;
+    min-width: 180px;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
 }
 
 .sidebar h2 {
@@ -37,6 +38,7 @@ body {
     font-size: 2rem;
     padding: 0 1rem;
     font-family: 'Baloo 2', cursive;
+    color: #355c5b;
 }
 
 .sidebar-nav {
@@ -50,17 +52,18 @@ body {
 .sidebar-nav a {
     display: block;
     padding: 1rem 2.2rem;
-    color: white;
+    color: #355c5b;
     text-decoration: none;
     transition: all 0.3s ease;
     border-left: 3px solid transparent;
     font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.15rem;
+    border-radius: 12px;
 }
 
 .sidebar-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-left-color: #ffd700;
+    background-color: #d0f4f7;
+    border-left-color: #7ed6df;
     transform: translateX(5px);
 }
 
@@ -80,17 +83,17 @@ body {
 }
 
 .header h1 {
-    font-size: 4rem;
-    color: #8b4513;
+    font-size: 3.2rem;
+    color: #355c5b;
     margin-bottom: 1.2rem;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 2px 8px #e3f6f5;
     font-family: 'Baloo 2', cursive;
 }
 
 .header p {
-    font-size: 1.5rem;
-    color: #666;
+    font-size: 1.4rem;
+    color: #5e7d7e;
     max-width: 700px;
     margin: 0 auto;
     font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -103,31 +106,37 @@ body {
     gap: 2.5rem;
     max-width: 1200px;
     width: 100%;
+    margin-bottom: 3rem; /* Added space below buttons */
+}
+
+.branch-block {
+    width: 100%; /* Ensures uniform sizing in grid */
 }
 
 .branch-button {
-    background: linear-gradient(135deg, #8b4513, #a0522d);
-    color: white;
-    padding: 2.5rem 1.5rem;
+    background: linear-gradient(135deg, #b8e0e7, #a7c7c5);
+    color: #355c5b;
+    height: 200px; /* Equal height for all buttons */
+    width: 100%;   /* Fill parent grid cell */
+    padding: 1.5rem;
     border-radius: 18px;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+    box-shadow: 0 8px 25px rgba(52, 100, 100, 0.13);
     border: none;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 230px;
     font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.25rem;
 }
 
 .branch-button:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(139, 69, 19, 0.4);
-    background: linear-gradient(135deg, #a0522d, #cd853f);
+    box-shadow: 0 15px 35px rgba(52, 100, 100, 0.18);
+    background: linear-gradient(135deg, #e3f6f5, #b8e0e7);
 }
 
 .branch-button h3 {
@@ -135,6 +144,7 @@ body {
     margin-bottom: 1.2rem;
     font-weight: 700;
     font-family: 'Baloo 2', cursive;
+    color: #355c5b;
 }
 
 .branch-button p {
@@ -142,6 +152,7 @@ body {
     opacity: 0.95;
     line-height: 1.6;
     font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #5e7d7e;
 }
 
 .landing-baby-img {
@@ -155,107 +166,73 @@ body {
     background: transparent;
 }
 
-.card {
-    background: linear-gradient(135deg, #f0e6d2, #e8d4bb);
+.branch-dynamic-card {
+    background: #ffffffc2;
+    padding: 2rem;
     border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(139, 69, 19, 0.25);
-    padding: 2rem 2rem;
-    margin-bottom: 2.5rem;
-    color: #3b2c22;
-    font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: all 0.3s ease;
-    max-width: 100%;
+    box-shadow: 0 8px 20px rgba(52, 100, 100, 0.1);
+    max-width: 1000px;
     width: 100%;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(139, 69, 19, 0.2);
-}
-
-.card h2 {
-    margin-top: 0;
-    font-size: 2rem;
-    color: #8b4513;
+.branch-dynamic-card h2 {
     font-family: 'Baloo 2', cursive;
+    font-size: 2rem;
+    color: #355c5b;
     margin-bottom: 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.card p {
+.branch-dynamic-card p,
+.branch-dynamic-card ul {
     font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 1rem;
+    color: #355c5b;
 }
 
-.highlight-box {
-    background: #f5fff8;
-    border-left: 5px solid #00cc88;
-    padding: 1.2rem 1.5rem;
-    font-style: italic;
-    font-size: 1.25rem;
-    color: #2d3c2d;
-    border-radius: 12px;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: inset 0 0 8px rgba(0, 255, 136, 0.1);
-}
-
-.card ul {
-    padding-left: 1.8rem;
+.branch-dynamic-card ul {
+    padding-left: 1.5rem;
     margin-top: 1rem;
 }
 
-.card ul li {
-    margin-bottom: 0.75rem;
-    font-size: 1.15rem;
+.branch-dynamic-card ul li {
+    margin-bottom: 0.5rem;
 }
 
-.main-content {
-    max-width: 800px;
+.section-summary {
+    font-style: italic;
+    color: #5e7d7e;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.branch-section {
+    width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 2rem 1.5rem;
-}
-
-.branch-block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    max-width: 350px;
-    margin: 0 auto;
 }
 
-.branch-button {
-    width: 100%;
-    padding: 1.8rem;
-    border-radius: 18px;
-    background: linear-gradient(135deg, #8b4513, #a0522d);
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
-}
-
-.branch-button:hover {
-    background: linear-gradient(135deg, #a0522d, #cd853f);
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(139, 69, 19, 0.4);
-}
-
-.branch-button h3 {
-    font-size: 1.8rem;
-    margin: 0;
-    font-family: 'Baloo 2', cursive;
-}
-
-.branch-description {
+.home-button {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background: linear-gradient(135deg, #b8e0e7, #a7c7c5);
+    color: #355c5b;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-family: 'Quicksand', sans-serif;
     font-size: 1.1rem;
-    margin-top: 1rem;
-    color: #444;
-    line-height: 1.6;
-    max-width: 90%;
-}
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(52, 100, 100, 0.15);
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+  
+  .home-button:hover {
+    background: linear-gradient(135deg, #e3f6f5, #b8e0e7);
+    transform: translateY(-3px);
+  }
 
 /* Responsive Design */
 @media (max-width: 1100px) {
@@ -276,6 +253,7 @@ body {
         font-size: 1rem;
         position: relative;
         box-shadow: none;
+        border-radius: 0 0 32px 32px;
     }
 
     .main-content {
@@ -283,11 +261,24 @@ body {
     }
 
     .header h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .branch-buttons {
         grid-template-columns: 1fr;
     }
-}
 
+    .branch-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 360px;
+        text-align: center;
+    }
+
+    .branch-description {
+        font-size: 1.1rem;
+        color: #5e7d7e;
+        margin-top: 1rem;
+    }
+}

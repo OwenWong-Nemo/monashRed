@@ -1,7 +1,132 @@
-This is Parent Branch, this page should have:
-- Information on how to prevent SUDI
-- Some parenting tips
-- Useful links to other resources
-- Risk factor for SUDI (Pre natal)
-- Post natal tips
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent</title>
+  <link rel="stylesheet" href="../style/branch1.css">
+</head>
+
+<body>
+  <div class="container">
+    <main class="main-content">
+      <a href="/" class="home-button">←</a>
+      <div class="header">
+        <h1>For Parents</h1>
+        <p>Discover our calming and comforting approach to supporting families. Explore our resources, strategies, and
+          community support designed to bring peace of mind and gentle guidance.</p>
+      </div>
+
+      <!-- START WRAPPER -->
+      <div class="branch-section">
+
+        <div class="branch-buttons">
+          <div class="branch-block">
+            <button class="branch-button" onclick="showBranchContent('prevention')">
+              <h3>Prevention</h3>
+            </button>
+          </div>
+
+          <div class="branch-block">
+            <button class="branch-button" onclick="showBranchContent('parenting')">
+              <h3>Parenting Tips</h3>
+            </button>
+          </div>
+
+          <div class="branch-block">
+            <button class="branch-button" onclick="showBranchContent('resources')">
+              <h3>Helpful Links</h3>
+            </button>
+          </div>
+
+          <div class="branch-block">
+            <button class="branch-button" onclick="showBranchContent('risks')">
+              <h3>Risk Factors</h3>
+            </button>
+          </div>
+
+          <div class="branch-block">
+            <button class="branch-button" onclick="showBranchContent('postNatal')">
+              <h3>Post-Natal Tips</h3>
+            </button>
+          </div>
+        </div>
+
+        <!-- Content that changes dynamically -->
+        <div id="branch-content" class="branch-dynamic-card">
+          <h2>Explore Our Calming Support</h2>
+          <p>Click a button above to learn more about each area of support we offer.</p>
+        </div>
+
+      </div>
+      <!-- END WRAPPER -->
+
+      <script>
+        function showBranchContent(type) {
+          const contentMap = {
+            prevention: `
+              <h2>How to Prevent SUDI (Sudden Unexpected Death in Infancy)</h2>
+              <p class="section-summary">A safe sleep environment is the most effective way to reduce the risk of SUDI. This section covers essential practices every parent should follow to protect their baby while sleeping.</p>
+              <ul>
+                <li>Use a firm and flat mattress that fits snugly in a safe, well-ventilated cot.</li>
+                <li>Avoid soft surfaces like couches, beanbags, or pillows.</li>
+                <li>No loose bedding, pillows, or toys in the cot.</li>
+                <li>Keep baby's sleep space smoke-free—before and after birth.</li>
+              </ul>
+            `,
+            parenting: `
+              <h2>Parenting Tips (Specific to SUDI Prevention)</h2>
+              <p class="section-summary">Everyday parenting choices can make a big difference. These tips help caregivers adopt safe habits and routines that minimize risk and promote healthy sleep.</p>
+              <ul>
+                <li>Place baby on their back to sleep—never on their tummy or side.</li>
+                <li>Keep baby’s head and face uncovered.</li>
+                <li>Remove hats or bonnets while indoors or sleeping.</li>
+                <li>Use fewer layers if baby has a fever.</li>
+                <li>Breastfeed if possible—it reduces SUDI risk.</li>
+                <li>Avoid any smoke exposure before or after birth.</li>
+                <li>Choose tight, upright carriers/slings that keep baby's airway clear.</li>
+                <li>Never fall asleep holding baby on a couch, recliner, or chair.</li>
+                <li>Avoid bed-sharing if you're overtired, unwell, have consumed alcohol or drugs, or if your baby is under 4 months or premature.</li>
+              </ul>
+            `,
+            resources: `
+              <h2>Government Support & Helpful Links</h2>
+              <p class="section-summary">You don’t have to do this alone—support is available. Here are trusted resources and contact points for both emotional support and practical guidance.</p>
+              <ul>
+                <li><strong>Red Nose 24/7 Bereavement Support:</strong> <a href="https://rednosegriefandloss.org.au/support/article/bereavement-support-services" target="_blank">Visit Site</a> — 📞 1300 308 307</li>
+                <li><strong>Red Nose Australia:</strong> <a href="https://rednose.org.au/" target="_blank">rednose.org.au</a> — 📞 1300 998 698</li>
+                <li><strong>National Association for Loss and Grief (NALAG):</strong> <a href="http://www.nalag.org.au/" target="_blank">nalag.org.au</a> — 📞 1800 100 023</li>
+                <li><strong>Also speak with:</strong> your GP, midwife, social worker, or child health nurse.</li>
+              </ul>
+            `,
+            risks: `
+              <h2>Risk Factors (Pre-Natal)</h2>
+              <p class="section-summary">Certain risks during pregnancy can increase the chance of SUDI. This section helps expectant parents understand and reduce these risk factors early on.</p>
+              <ul>
+                <li>Exposure to tobacco smoke—even secondhand.</li>
+                <li>Overheating—maintain a cool, comfortable sleep environment.</li>
+                <li>Unsafe sleep surfaces (e.g. adult beds, couches).</li>
+                <li>Extra items in the cot—like bumpers or plush toys.</li>
+                <li>Improper babywearing—ensure carriers allow free breathing.</li>
+              </ul>
+            `,
+            postNatal: `
+              <h2>Post-Natal Tips</h2>
+              <p class="section-summary">Safe sleep doesn’t end after birth—it’s a daily habit. Continue supporting your baby’s safety through consistent sleep routines and safe environments.</p>
+              <ul>
+                <li>Keep your home and car smoke-free.</li>
+                <li>Establish a safe sleep routine early.</li>
+                <li>Monitor baby’s temperature and adjust clothing as needed.</li>
+                <li>Educate grandparents, babysitters, and siblings about sleep safety.</li>
+              </ul>
+            `
+          };
+          document.getElementById('branch-content').innerHTML = contentMap[type];
+        }
+      </script>
+    </main>
+  </div>
+</body>
+
+</html>
