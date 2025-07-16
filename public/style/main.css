@@ -94,6 +94,7 @@ body {
     max-width: 700px;
     margin: 0 auto;
     font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
 }
 
 /* Branch Buttons */
@@ -153,6 +154,7 @@ body {
     outline: 0;
     box-shadow: none;
     background: transparent;
+    text-align: justify;
 }
 
 .card {
@@ -166,6 +168,7 @@ body {
     transition: all 0.3s ease;
     max-width: 100%;
     width: 100%;
+    text-align: justify;
 }
 
 .card:hover {
@@ -190,7 +193,7 @@ body {
 
 .highlight-box {
     background: #f5fff8;
-    border-left: 5px solid #00cc88;
+    border-left: 5px solid #b7700c;
     padding: 1.2rem 1.5rem;
     font-style: italic;
     font-size: 1.25rem;
@@ -255,6 +258,7 @@ body {
     color: #444;
     line-height: 1.6;
     max-width: 90%;
+    text-align: justify;
 }
 
 /* Responsive Design */
