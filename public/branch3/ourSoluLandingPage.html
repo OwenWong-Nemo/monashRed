@@ -6,72 +6,193 @@
   <title>Our Solution - SUDI Prevention</title>
   <link rel="stylesheet" href="../style/branch3.css">
 </head>
+
+<script>
+  function showHexContent(key) {
+    const contentMap = {
+      strategies: `
+        <h2>Strategies</h2>
+        <p>
+          To broaden impact and accessibility, we propose a range of strategies beyond the technology itself:
+          <ul>
+            <li><strong>Enhanced Online Presence:</strong> Social media and a website to raise awareness and connect with parents and professionals.</li>
+            <li><strong>Partnerships:</strong> Collaborate with hospitals, maternal health clinics, and Indigenous health services for localized distribution and trust.</li>
+            <li><strong>Educational Campaigns:</strong> Provide workshops, webinars, and printed materials to educate new parents.</li>
+            <li><strong>Device Lifecycle Planning:</strong> Create a return-and-recycle scheme for families whose infants have outgrown the device.</li>
+          </ul>
+        </p>
+      `,
+
+      vision: `
+        <h2>Vision</h2>
+        <p>
+          We envision two major areas of long-term impact:
+          <ul>
+            <li><strong>Reducing Infant Mortality:</strong> By tackling risk factors associated with SUDI, our solution helps prevent avoidable deaths.</li>
+            <li><strong>Commercial Viability:</strong> Broader adoption leads to larger reach and reinvestment into innovation, allowing Monash to offer subsidized units and invest in future research.</li>
+            <li><strong>Sustainability:</strong> Lifecycle-based design and recycling initiatives help reduce cost and environmental burden.</li>
+          </ul>
+        </p>
+      `,
+
+      inspiration: `
+        <h2>Inspiration</h2>
+        <p>
+          Our work draws inspiration from a blend of sources:
+          <ul>
+            <li>Existing infant monitors and wearable tech</li>
+            <li>Smart textiles and responsive design</li>
+            <li>Indigenous-led health initiatives focused on culturally safe care</li>
+            <li>The potential of AI in improving early health outcomes</li>
+          </ul>
+          These influences helped us develop a solution that balances empathy, innovation, and evidence-based care.
+        </p>
+      `,
+
+      advertising: `
+        <h2>Advertising</h2>
+        <p>
+          Our outreach and promotion plan centers on accessibility and trust:
+          <ul>
+            <li><strong>Hospital Partnerships:</strong> Work with Monash Health and other providers to directly promote in maternity wards and clinics.</li>
+            <li><strong>Community Outreach:</strong> Collaborate with Indigenous groups and parenting networks to ensure inclusive messaging and real-world relevance.</li>
+            <li><strong>Storytelling:</strong> Leverage testimonials and visual branding to create emotional connection and clarity in our messaging.</li>
+          </ul>
+        </p>
+      `,
+
+      sustainability: `
+        <h2>Sustainability</h2>
+        <p>
+          Our solution incorporates eco-conscious design from the outset:
+          <ul>
+            <li><strong>Return and Reuse:</strong> Devices can be returned after use for refurbishment or part recovery.</li>
+            <li><strong>Modular Components:</strong> Easy to disassemble, upgrade, or recycle — reducing waste over time.</li>
+            <li><strong>Repair Kits:</strong> Available to replace worn-out parts, extending the product’s life without replacing the full unit.</li>
+            <li><strong>Local Drop-off Points:</strong> Available via hospitals or mail-in options to simplify returns.</li>
+          </ul>
+        </p>
+      `,
+
+      onlinePresence: `
+        <h2>Online Presence</h2>
+        <p>
+          Digital engagement is essential to our impact:
+          <ul>
+            <li><strong>Awareness Campaigns:</strong> Use social platforms and our website to share safe sleep tips, SUDI stats, and parenting resources.</li>
+            <li><strong>Advertising:</strong> Reach parents through targeted campaigns on platforms like Facebook, Instagram, and Google.</li>
+            <li><strong>Partner Networking:</strong> Build bridges with healthcare organizations, NGOs, and parenting influencers for shared visibility.</li>
+            <li><strong>Interactive Tools:</strong> Host digital crib demos, community Q&A, and downloadable guides to support parents virtually.</li>
+          </ul>
+        </p>
+      `
+    };
+
+    document.getElementById('overlay-content').innerHTML = contentMap[key] || `<p>Coming soon...</p>`;
+    document.getElementById('overlay-container').classList.remove('hidden');
+    document.body.classList.add('blur-active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function hideOverlay() {
+    document.getElementById('overlay-container').classList.add('hidden');
+    document.body.classList.remove('blur-active');
+    document.body.style.overflow = '';
+  }
+</script>
+
 <body>
   <div class="branch3-container">
-
-    <!-- Header Row -->
+    <!-- Header -->
     <div class="branch3-header-row">
-      <div class="branch3-home-btn" style="position: absolute; left: 0;">
+      <div class="branch3-home-btn">
         <a href="/index.html">
-          <button style="background: linear-gradient(135deg, #0f3d0f, #00ff88); color: #aaffaa; border: none; border-radius: 10px; padding: 0.5em 1.2em; font-size: 1em; font-family: 'Orbitron', sans-serif; box-shadow: 0 2px 8px #00ff88; cursor: pointer;">
-            Home
-          </button>
+          <button class="home-btn">Home</button>
         </a>
       </div>
       <div class="branch3-header">Our Solution</div>
     </div>
 
-    <!-- Hexagonal Links -->
-    <div class="branch3-links">
+    <!-- Headings Outside Containers -->
+    <div class="button-sections-wrapper">
 
-      <a href="#" class="hexagon-link">
-        <div class="hexagon-shape"></div>
-        <div class="hexagon-content">
-          <div class="hexagon-title">Strategies</div>
-          <div class="hexagon-desc">Strategies we proposed to tackle SUDI</div>
+      <!-- Left Column: Prototype -->
+      <div class="section-wrapper">
+        <h2 class="section-heading">Prototype</h2>
+        <div class="prototype-section">
+          <a href="/prototypeMain" class="hexagon-link prototype-button">
+            <div class="hexagon-shape"></div>
+            <div class="hexagon-content">
+              <div class="hexagon-title">Product Prototype</div>
+              <div class="hexagon-desc">3D model of features we planned to implement</div>
+            </div>
+          </a>
         </div>
-      </a>
+      </div>
 
-      <a href="/prototypeMain" class="hexagon-link">
-        <div class="hexagon-shape"></div>
-        <div class="hexagon-content">
-          <div class="hexagon-title">Product Prototype</div>
-          <div class="hexagon-desc">3D model of features we planned to implement</div>
+      <!-- Right Column: Info Buttons -->
+      <div class="section-wrapper">
+        <h2 class="section-heading">Explore Topics</h2>
+        <div class="info-section">
+          <a href="#" class="hexagon-link" onclick="showHexContent('strategies'); return false;">
+            <div class="hexagon-shape"></div>
+            <div class="hexagon-content">
+              <div class="hexagon-title">Strategies</div>
+              <div class="hexagon-desc">Strategies we proposed to tackle SUDI</div>
+            </div>
+          </a>
+
+          <a href="#" class="hexagon-link" onclick="showHexContent('vision'); return false;">
+            <div class="hexagon-shape"></div>
+            <div class="hexagon-content">
+              <div class="hexagon-title">Vision</div>
+              <div class="hexagon-desc">How our ideas might impact the future</div>
+            </div>
+          </a>
+
+          <a href="#" class="hexagon-link" onclick="showHexContent('inspiration'); return false;">
+            <div class="hexagon-shape"></div>
+            <div class="hexagon-content">
+              <div class="hexagon-title">Inspiration</div>
+              <div class="hexagon-desc">Other tech concepts or research pipeline</div>
+            </div>
+          </a>
+
+          <a href="#" class="hexagon-link" onclick="showHexContent('advertising'); return false;">
+            <div class="hexagon-shape"></div>
+            <div class="hexagon-content">
+              <div class="hexagon-title">Advertising</div>
+              <div class="hexagon-desc">Exploring how to promote adoption</div>
+            </div>
+          </a>
+
+          <a href="#" class="hexagon-link" onclick="showHexContent('sustainability'); return false;">
+            <div class="hexagon-shape"></div>
+            <div class="hexagon-content">
+              <div class="hexagon-title">Sustainability</div>
+              <div class="hexagon-desc">Proposal of our recycling and sustainability initiatives</div>
+            </div>
+          </a>
+
+          <a href="#" class="hexagon-link" onclick="showHexContent('onlinePresence'); return false;">
+            <div class="hexagon-shape"></div>
+            <div class="hexagon-content">
+              <div class="hexagon-title">Online Presence</div>
+              <div class="hexagon-desc">Online presence</div>
+            </div>
+          </a>
         </div>
-      </a>
+      </div>
+    </div>
 
-      <a href="#" class="hexagon-link">
-        <div class="hexagon-shape"></div>
-        <div class="hexagon-content">
-          <div class="hexagon-title">Vision</div>
-          <div class="hexagon-desc">How our ideas might impact the future</div>
+    <!-- Overlay -->
+    <div id="overlay-container" class="overlay-container hidden">
+      <div class="overlay-card" id="overlay-card">
+        <button class="overlay-back-btn" onclick="hideOverlay()">← Back</button>
+        <div id="overlay-content" class="overlay-content">
+          <!-- Dynamic content -->
         </div>
-      </a>
-
-      <a href="#" class="hexagon-link">
-        <div class="hexagon-shape"></div>
-        <div class="hexagon-content">
-          <div class="hexagon-title">Inspiration</div>
-          <div class="hexagon-desc">Other tech concepts or research pipeline</div>
-        </div>
-      </a>
-
-      <a href="#" class="hexagon-link">
-        <div class="hexagon-shape"></div>
-        <div class="hexagon-content">
-          <div class="hexagon-title">Advertising</div>
-          <div class="hexagon-desc">Exploring how to promote adoption</div>
-        </div>
-      </a>
-
-      <a href="#" class="hexagon-link">
-        <div class="hexagon-shape"></div>
-        <div class="hexagon-content">
-          <div class="hexagon-title">Sustainability</div>
-          <div class="hexagon-desc">Proposal of our recycling and sustainability initiatives</div>
-        </div>
-      </a>
-
+      </div>
     </div>
   </div>
 </body>
