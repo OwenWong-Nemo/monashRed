@@ -205,6 +205,7 @@ body {
 .collapsible-section.active .collapsible-body {
     max-height: 600px;
     padding: 1rem 1.8rem 1.5rem;
+    text-align: justify;
 }
 
 .collapsible-body ul {
